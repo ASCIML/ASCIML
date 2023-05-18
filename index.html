@@ -11,13 +11,20 @@
 			background-color: #f5f5f5;
 		}
 		.container {
-			max-width: 1000px;
+			max-width: 1200px;
 			margin: 0 auto;
 			padding: 20px;
 			background-color: #fff;
 			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+			text-align: justify;
+			text-justify: inter-word;
+			line-height: 1.5;
 		}
 		h1 {
+			text-align: center;
+			margin-top: 0;
+		}
+		h2 {
 			text-align: center;
 			margin-top: 0;
 		}
@@ -36,50 +43,104 @@
 		}
 		.result p {
 			margin: 0;
+			text-align: justify;
+			text-justify: inter-word;
+			line-height: 1.5;
 		}
+		.column {
+  float: left;
+  width: 45%;
+  padding: 28px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 	</style>
 </head>
 <body>
-	<header>
-		<div class="logo">Músicos Morelia</div>
-		<nav>
-		  <ul>
-			<li><a href="public/tesis.html">ASCIML</a></li>
-			<li><a href="index.html">Directorio</a></li>
-			<li><a href="nosotros.html">Nosotros</a></li>
-			<li><a href="contacto.html">Contacto</a></li>
-		  </ul>
-		</nav>
-	  </header>
 	<div class="container">
-		<h1>Exploring the potential of interactive Machine Learning for Sound Generation: A preliminary study with sound artists</h1>
-		<p>Interactive Machine Learning (IML) is an approach previ- ously explored in music discipline [10, 11, 13, 18].
-            However, its adaptation in sound synthesis as an algorithmic method of creation has not been examined. 
-            This article presents the prototype ASCIML, an Assistant for Sound Creation with Interactive Machine Learning,
-             that allows musicians to use IML to create personalized datasets and generate new sounds. 
-             Additionally, a preliminary study is presented which aims to evaluate the potential of ASCIML 
-             as a tool for sound synthesis and to gather feedback and suggestions for future improvements. 
-             The prototype can be used in Google Colaboratory [2] and is divided into four main stages: 
-             Data Design, Training, Evaluation and Audio Creation. 
-             Results from the study, which involved 27 musicians with no prior knowledge of Machine Learning (ML), 
-             showed that most participants preferred using microphone recording and synthesis to design their dataset 
-             and that the Envelopegram visualization was found to be particularly meaningful to understand sound datasets. It was also found that the ma- jority of participants preferred to implement a pre-trained model on their data and relied on hearing the audio recon- struction provided by the interface to evaluate the model performance. Overall, the study demonstrates the poten- tial of ASCIML as a tool for hands-on neural audio sound synthesis and provides valuable insights for future develop- ments in the field.</p>
+		<h1>Exploring the potentials of interactive Machine Learning for Sound Generation: A preliminary study with sound artists</h1>
+		<h2>A preliminary study with sound artists</h2>
+			<h2>Gerardo Meza - UNAM</h2>
+		<p>This article introduces ASCIML, an interactive machine learning (IML) prototype that combines IML and generative models for sound synthesis. 
+			ASCIML allows users, including undergraduate musicians, to create personalized datasets, train models, and generate audio clips without prior ML knowledge. 
+			The prototype includes data visualization tools, parameter controls, and the option to use a pre-trained model. The study aims to evaluate ASCIML's effectiveness, 
+			musicians' dataset preferences, the impact of visualizations and pre-trained models, and musicians' sound generation strategies.</p>
         <div class="results">
 			<!-- Add results dynamically here using server-side scripting language or javascript -->
 			<div class="result">
-				<h2>Result Title</h2>
-				<p>Result description goes here...</p>
-				<p><a href="/public/tesis.html">Tesis</a></p>
+				<h2>THE PROTOTYPE</h2>
+				<img src="diagram.png" alt="alternatetext" width="100%">
 			</div>
 			<div class="result">
-				<h2>Result Title</h2>
-				<p>Result description goes here...</p>
-				<p><a href="#">Link to full result</a></p>
+				<h2>MUSICIANS AND ASCIML</h2>
+				<p>This study aimed to assess the use of ASCIML as a tool for musicians. 
+					Two groups of undergraduate musicians from UNAM, ENES Morelia were recruited: 
+					one group of beginners (16 participants) and another group of experienced musicians (11 participants). 
+					The participants underwent a training session on machine learning (ML) concepts, datasets, model training, 
+					and evaluation. They were then given 2 hours to create a dataset with ≥ 60 audio files using three techniques, 
+					train a model from scratch, evaluate its performance, and generate new sounds.
+					They were also asked to use a pre-trained model with the same dataset and repeat the process. 
+					The study objectives included assessing musicians' preferences in creating personalized datasets, 
+					evaluating the effectiveness of different data visualizations, investigating the impact of a pre-trained model, 
+					understanding musicians' strategies in generating new sounds and the influencing factors, and gathering feedback to improve the overall experience of using IML for sound synthesis.</p>
+				<div class="row">
+					<div class="column">
+					  <img src="WhatsApp Image 2022-12-03 at 8.25.20 PM.jpg" alt="Snow" style="width:100%">
+					</div>
+					<div class="column">
+					  <img src="lab_FAM.png" alt="Forest" style="width:100%">
+					</div>
+				  </div>
 			</div>
 			<div class="result">
-				<h2>Result Title</h2>
-				<p>Result description goes here...</p>
-				<p><a href="#">Link to full result</a></p>
+				<h2>PRELIMINARY RESULTS</h2>
+				<div class="row">
+					<div class="column">
+					  <img src="compelling (1).png" alt="Snow" style="width:100%">
+					</div>
+					<div class="column">
+					  <img src="Captura de pantalla 2023-05-16 a la(s) 19.57.35.png" alt="Forest" style="width:100%">
+					</div>
+				</div>
+					<p>The study found that timbre was the most utilized criteria to generate their datasets. Also, that the participants fa- vored using microphone recording and synthesis to create their dataset, with 76% rating these methods as efficient or very efficient (Figure 4). The Envelopegram visualization and tables were also found to be particularly useful, with the majority of participants stating that they provided rel- evant information. In contrast, histograms were voted as the least useful of all the visualizations provided.</p>
+					<p>The participants of the first group suggested integrating more auditory information into the interface. This feature was implemented and tested with the second group. In terms of evaluating the model, over 50% of the participants relied on hearing the audio reconstruction provided by the interface, while 40% relied on the waveforms visualization. Furthermore, almost half of the participants considered that the pretrained model gave better results in reconstructing their data in the given time of the activity.
+						When it came to creating new sounds, a significant pro- portion of participants were able to obtain musically inter- esting sounds within a short timeframe, specifically, 37% of participants reported obtaining these sounds in under 20 minutes (Figure 5). An experimental approach to sound synthesis was common between the participants (44.4%), while over 30% focused on timbre contrast and affinities (Figure 5). Lastly, during both studies it was also observed that nearly all composers spent most of the activity creat- ing the datasets, small collections of sounds at the time, followed by the exploration of their interpolation results.
+						</p>
+				  
+			</div>
+			<div class="result">
+				<h2>FINDINGS</h2>
+				<p><ul>
+					<li>Participants preferred creating datasets using microphone recording and synthesis.</li>
+					<li>The Envelopegram visualization was effective in understanding the dataset.</li>
+					<li>Auditory information in the interface was beneficial for users</li>
+					<li>Participants relied on audio reconstruction and waveform visualization during model evaluation.</li>
+					<li>Pre-trained models were considered to produce better results in reconstructing data.</li>
+					<li>Participants approached sound generation experimentally, considering timbral contrast and similarities.</li>
+					<li>Participants successfully generated musically compelling sounds despite reconstruction noise.</li>
+					<li>IML shows potential as a valuable tool for sound synthesis, but further research is needed to enhance the user experience.</li>
+				  </ul></p>
+			</div>
+			<div class="result">
+				<h2>CONCLUSIONS AND FUTURE WORK</h2>
+				This article highlights the potential of ASCIML as a valuable tool for musicians in creating personalized datasets and generating new sounds. The study found that most participants preferred using microphone recording and synthesis techniques to design their datasets, with a focus on timbre. The data visualizations provided, particularly the Envelopgram, were effective in understanding sound collections. The use of a pre-trained model was found to accelerate the audio reconstruction process. Overall, the study demonstrated that musicians were engaged and benefited from the activity as a valuable learning experience. However, there are areas for improvement, including expanding the model's audio-length reconstruction capabilities, providing more auditory information and interactive visualization within the interface, and conducting a longer study involving participants from diverse backgrounds incorporating the generated sounds into musical contexts
+				<p><a href="/public/tesis.html">Thesis</a></p>
+			</div>
+			<div class="result">
+				<h2>REFERENCES</h2>
+				<p><ul>
+					<li>S. Amershi, M. Cakmak, W. B. Knox, and T. Kulesza. Power to the people: The role of humans in interactive machine learning. Ai Magazine, 35(4):105–120, 2014. 
+					</li>
+					<li>J. A. Fails and D. R. Olsen Jr. Interactive machine learning. In Proceedings of the 8th international conference on Intelligent user interfaces, pages 39–45, 2003. 
+					</li>
+					<li>R. Fiebrink, P. R. Cook, and D. Trueman. Human model evaluation in interactive supervised learning. In Proceedings of the SIGCHI conference on human factors in computing systems, pages 147–156, 2011. 
+					</li>
+				  </ul></p>
 			</div>
 		</div>
 	</div>
